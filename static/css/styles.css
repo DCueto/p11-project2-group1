@@ -1,0 +1,111 @@
+
+
+/* Basic Styles */
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* MAIN VIEW */
+
+.main-view{
+  background-color: darkslategrey;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.main-view-container{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid black;
+}
+
+
+/* CONTENT BOX (Left side div) */
+
+.main-view-container .content-box{
+  width: 40%;
+  height: 90%;
+  border: 2px solid black;
+}
+
+/* Bordered div of content-box */
+.content-box .content-box-container{
+  box-sizing: border-box;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  background-color: dimgray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* list */
+
+.content-box .content-box-container .content-list{
+  height: 80%;
+}
+
+/* Inputs */
+
+.content-box .content-box-container .content-form{
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-form input{
+  height: 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content-form input[type="submit"]{
+  
+}
+
+
+/* sacrifice button */
+
+.content-box .sacrificeBtn{
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 20px auto;
+}
+
+
+
+/* NOTEBOOK (Right side div) */
+
+.main-view-container .notebook{
+  width: 60%;
+  height: 90%;
+  display: flex;
+  border: 2px solid black;
+}
+
+.main-view-container .notebook > div{
+  width: 50%;
+  border: 2px solid black;
+}
