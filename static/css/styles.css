@@ -13,7 +13,9 @@ body, html{
 /* MAIN VIEW */
 
 .main-view{
-  background-color: darkslategrey;
+  /* background-color: darkslategrey; */
+  background: url('../img/background.jpg');
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -63,6 +65,32 @@ body, html{
 
 .content-box .content-box-container .content-list{
   height: 80%;
+  overflow: scroll;
+}
+
+.content-list ul{
+  margin: 0;
+  padding: 0;
+}
+
+.content-list .content-list-item{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.content-list .content-list-item .content-list-item-name{
+  width: 80%;
+}
+
+.content-list .content-list-item .delete-button{
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Inputs */
@@ -70,8 +98,9 @@ body, html{
 .content-box .content-box-container .content-form{
   height: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .content-form input{
@@ -102,6 +131,9 @@ body, html{
   width: 60%;
   height: 90%;
   display: flex;
+  background: url('../img/notebook.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
   border: 2px solid black;
 }
 
