@@ -1,10 +1,17 @@
 
+  /* Fonts */
+
+  @font-face {
+    font-family: "DeathNote";
+    src: url("../fonts/Death\ Note.ttf");
+  }
 
 /* Basic Styles */
 
 body, html{
   margin: 0;
   padding: 0;
+  font-family: "DeathNote";
 }
 
 
@@ -31,7 +38,7 @@ body, html{
   justify-content: center;
   align-items: center;
   align-content: center;
-  border: 2px solid black;
+
 }
 
 
@@ -40,7 +47,6 @@ body, html{
 .main-view-container .content-box{
   width: 40%;
   height: 90%;
-  border: 2px solid black;
 }
 
 /* Bordered div of content-box */
@@ -50,38 +56,44 @@ body, html{
   height: 80%;
   margin: 0 auto;
   margin-top: 20px;
-  border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   color: white;
-  background-color: dimgray;
+  background-color: rgba(38, 18, 18, 0.7);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 /* list */
 
 .content-box .content-box-container .content-list{
-  height: 80%;
+  height: auto;
   overflow: scroll;
+  margin-top: 20px;
 }
 
 .content-list ul{
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .content-list .content-list-item{
   display: flex;
-  width: 100%;
+  width: auto;
   align-items: center;
   gap: 15px;
+  background-color: brown;
+  border-radius: 5px;
+  padding: 7px 10px;
 }
 
 .content-list .content-list-item .content-list-item-name{
-  width: 80%;
+  margin: 0;
 }
 
 .content-list .content-list-item .delete-button{
@@ -91,6 +103,7 @@ body, html{
   background-color: red;
   text-align: center;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* Inputs */
@@ -109,8 +122,20 @@ body, html{
   box-sizing: border-box;
 }
 
+.content-form input#input-user{
+  width: 60%;
+  background: lightgrey;
+  height: 60%;
+  padding-left: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+
 .content-form input[type="submit"]{
-  
+  background-color: #893636;
+  border: 0;
+  height: 60%;
+  border-radius: 5px;
 }
 
 
@@ -118,9 +143,15 @@ body, html{
 
 .content-box .sacrificeBtn{
   display: block;
-  width: 80%;
-  height: 40px;
+  font-size: 20px;
+  font-family: "DeathNote";
+  color: white;
+  width: 60%;
+  height: 50px;
   margin: 20px auto;
+  background-color: rgba(137, 54, 54, 1);
+  border-radius: 10px;
+  border: 0;
 }
 
 
@@ -128,16 +159,58 @@ body, html{
 /* NOTEBOOK (Right side div) */
 
 .main-view-container .notebook{
-  width: 60%;
+  width: 700px;
   height: 90%;
   display: flex;
-  background: url('../img/notebook.png');
+  align-items: center;
+  flex-shrink: 0;
+  /* background: url('../img/notebook.png');
+  background-size: 100%;
+  background-repeat: no-repeat; */
+}
+.main-view-container .notebook .briefing{
+  background: url('../img/notebook-1.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  border: 2px solid black;
 }
+
+.main-view-container .notebook .notebook-page{
+  background: url('../img/notebook-2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main-view-container .notebook .notebook-page-container{
+  width: 100%;
+  height: 35vw;
+  position: absolute;
+  top: 5vh;
+  left: 2vw;
+}
+
+.notebook-page-container .notebook-item{
+  font-size: 14px;
+}
+
 
 .main-view-container .notebook > div{
   width: 50%;
-  border: 2px solid black;
+  height: 90%;
 }
+
+
+/* RESET BUTTON */
+
+.resetBtn{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  cursor: pointer;
+}
+
+

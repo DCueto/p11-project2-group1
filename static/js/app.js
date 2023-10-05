@@ -3,24 +3,15 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 function initApp(){
 
-
   /* Variables */
 
-  let list = [
-    {name: "Michely", id: 1},
-    {name: "Andres", id: 2},
-    {name: "Santi", id: 3},
-    {name: "Alexander", id: 4},
-    {name: "Daniel", id: 5},
-  ];
-
-  let sacrificedItems = [];
+  let list, sacrificedItems;
 
   /* Elements */
 
     /* Containers */
   const listBox = document.querySelector('.content-list');
-  const notebook = document.querySelector('.notebook-page');
+  const notebook = document.querySelector('.notebook-page-container');
   const ul = listBox.querySelector('ul');
 
 
@@ -28,8 +19,25 @@ function initApp(){
 
   const addBtn = document.querySelector('.content-form input[type="submit"]');
   const sacrificeBtn = document.querySelector('.sacrificeBtn');
+  const resetBtn = document.querySelector('.resetBtn');
 
-  
+  /* INIT APP */
+
+  function init(){
+    list = [
+      {name: "Michely", id: 1},
+      {name: "Andres", id: 2},
+      {name: "Santi", id: 3},
+      {name: "Alexander", id: 4},
+      {name: "Daniel", id: 5},
+    ];
+
+    sacrificedItems = [];
+    updateHTML(ul);
+    updateHTML(notebook);
+  }
+
+  init();
 
   /* Event Listeners */
 
@@ -39,12 +47,8 @@ function initApp(){
     addBtn.addEventListener('click', addOnList);
     listBox.addEventListener('click', removeOnList);
     sacrificeBtn.addEventListener('click', randomSacrifice);
+    resetBtn.addEventListener('click', init);
   }
-
-  // Init app
-  updateHTML(ul);
-  updateHTML(notebook);
-
 
 
   /* Event Functions */
@@ -125,7 +129,7 @@ function initApp(){
       list.forEach(item => {
         createElementListItem(item, ul);
       });
-    } else if (el.classList.contains('notebook-page')){
+    } else if (el.classList.contains('notebook-page-container')){
       sacrificedItems.forEach(item => {
         createElementListItem(item, notebook);
       });
@@ -161,7 +165,7 @@ function initApp(){
 
       container.appendChild(el);
 
-    } else if(container.classList.contains('notebook-page')){
+    } else if(container.classList.contains('notebook-page-container')){
       let el = document.createElement('div');
       el.setAttribute("data-id", item.id);
       el.classList.add("notebook-item");
