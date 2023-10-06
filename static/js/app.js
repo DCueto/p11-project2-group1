@@ -8,6 +8,9 @@ function initApp() {
     let discartedNames = [];
     let discartedNamesSection = document.querySelector(".deadPeople");
 
+    let audio = new Audio("../Resources/l_theme_death_note.mp3");
+    audio.volume = 0.1;
+    audio.play();
 
     //lista de nombres
     let nameSection = document.querySelector(".nameSection ul");
