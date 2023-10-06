@@ -84,7 +84,6 @@ body {
     position: relative;
     top: -60%;
 
-
 }
 
 #sacrificeButton {
@@ -97,10 +96,11 @@ body {
     background-color: #C60202;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .nameSection ul {
+    margin-top: 140px;
     font-size: 23px;
     list-style-type: none;
     color: rgb(180, 180, 180);
