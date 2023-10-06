@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'bloodyFont';
+    src: url(/static/Resources/blood.ttf) format('truetype');
+    font-family: 'handwritingFont';
+    src: url(/static/Resources/handwriting.ttf) format('truetype');
+}
+
+main {
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url(/static/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.column1 {
+    height: 800px;
+    margin: 50px;
+    /*border: 2px solid black;*/
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(54, 4, 4, 0.30);
+    border-radius: 30px;
+}
+
+.column2 {
+    height: 800px;
+    margin: 50px;
+    /*border: 2px solid black;*/
+    background-image: url(/static/img/notebook.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    border-radius: 30px;
+}
+
+.deadPeople {
+    margin-top: 80px;
+    margin-left: 220px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    list-style-type: none;
+    font-weight: bold;
+    align-self: auto;
+    font-family: handWritingFont;
+}
+
+.userAction {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+
+#namefield {
+    padding: 10px;
+    margin: 50px;
+    border-radius: 10px;
+    margin: 13px;
+    position: relative;
+    top: -40px;
+}
+
+#addButton {
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: #C60202;
+    position: relative;
+    top: -60%;
+
+}
+
+#sacrificeButton {
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #C60202;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 80px;
+}
+
+.nameSection ul {
+    margin-top: 140px;
+    font-size: 23px;
+    list-style-type: none;
+    color: rgb(180, 180, 180);
+    width: 430px;
+    height: 400px;
+    text-align: center;
+    font-weight: bold;
+    font-family: bloodyFont;
+}
+
+.nameSection li {
+    margin-bottom: 5px;
+}
