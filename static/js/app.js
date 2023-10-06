@@ -34,20 +34,12 @@ function initApp() {
         discartedNamesSection.innerHTML = "";
     }
 
-    //let names = [];
-
     //se especifica donde estará la víctima seleccionada
     let nameDisplay = document.querySelector(".deadPeople");
 
-    /*document.getElementById("addButton").onclick = function () {
-        let newName = document.getElementById("namefield").value;
-        nameSection.insertAdjacentHTML("beforeend", `<li>${newName}</li>`);
-        document.getElementById("namefield").value = "";
-    }*/
 
     updateOriginalNames(names);
 
-    //updateOriginalNames(names);
 
     //click en #sacrificeButton
     document.getElementById("sacrificeButton").onclick = function () {
