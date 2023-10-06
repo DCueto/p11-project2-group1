@@ -36,17 +36,21 @@ body {
     border-radius: 30px;
 }
 
-
-.deadPeople {
+.column2 {
     height: 800px;
     margin: 50px;
     /*border: 2px solid black;*/
     background-image: url(/static/img/notebook.png);
     background-repeat: no-repeat;
     background-position: center;
-    color: black;
     background-size: 90%;
     border-radius: 30px;
+}
+
+.deadPeople {
+    margin-top: 80px;
+    margin-left: 220px;
+    color: black;
     font-size: 30px;
     text-align: center;
     list-style-type: none;
